@@ -1,6 +1,5 @@
 var player1 = document.getElementById('one')
 var player2 = $('#two')
-var container = document.getElementById('container')
 var game = {
   player1: {
     keyLeft: 65,
@@ -22,45 +21,46 @@ var game = {
   block: {},
   metalBlock: {}
 }
+
 var guyLeft = 0
-var guyUp = 0
+var guyU = 0
+var guy2L = 0
+var guy2U = 0
 
     function movement(e) {
       //alert(e.keyCode)
       if(e.keyCode == 68) {
         guyLeft += 10
         player1.style.left = guyLeft + 'px'
-        if (guyLeft >= 450) {
-          guyLeft -= 10
-        }
       }
       else if (e.keyCode == 65) {
         guyLeft -= 10
         player1.style.left = guyLeft + 'px'
-        if(guyLeft <= 0) {
-          guyLeft += 10
-        }
       }
       else if (e.keyCode == 83){
-      guyUp += 10
-      player1.style.top = guyUp + 'px'
-        if (guyUp >= 450) {
-          guyUp -= 10
-        }
+        guyU += 10
+        player1.style.top = guyU + 'px'
       }
       else if (e.keyCode == 87) {
-        guyUp -= 10
-        player1.style.top = guyUp + 'px'
-        if (guyUp <= 0) {
-          guyUp += 10
-        }
+        guyU -= 10
+        player1.style.top = guyU + 'px'
       }
-      // this affects the other objects movement
+      // this affects the other objects movement and position
       else if (e.keyCode == 39) {
-        guyLeft += 10
-        player2.css({left: guyLeft + "px"})
+        guy2L += 10
+        player2.css({left: guy2L + "px"})
+      }
+      else if (e.keyCode == 37) {
+        guy2L -= 10
+        player2.css({left: guy2L + "px"})
+      }
+      else if (e.keyCode == 40) {
+        guy2U += 10
+        player2.css({top: guy2U + "px"})
+      }
+      else if (e.keyCode == 38) {
+        guy2U -= 10
+        player2.css({top: guy2U + "px"})
       }
     }
-
 document.onkeydown = movement
-// document.onkeydown = moveplayer2
