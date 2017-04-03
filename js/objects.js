@@ -3,3 +3,9 @@
 // var fire []
 // var block = []
 // var boxBlock = []
+
+function blowBomb() {
+  bomb.setInterval(function(){
+    console.log("BOOOOOOOOM!!!")
+  }, 1000)
+}

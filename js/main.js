@@ -28,7 +28,7 @@ var guy2L = 0
 var guy2U = 0
 
     function movement(e) {
-      //alert(e.keyCode)
+      //console.log(e.keyCode)
       if(e.keyCode == 68) {
         guyLeft += 10
         player1.style.left = guyLeft + 'px'
@@ -63,4 +63,10 @@ var guy2U = 0
         player2.css({top: guy2U + "px"})
       }
     }
+
+    function Player() {
+      this.x = 0
+      this.y = 0
+    }
+
 document.onkeydown = movement

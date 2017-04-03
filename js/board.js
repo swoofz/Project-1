@@ -1,6 +1,11 @@
 var body = document.querySelector('body')
 var container = document.createElement ('div')
+var guy1 = document.createElement('div')
+var guy2 = document.createElement('div')
+guy1.className = 'player'
+guy2.className = 'player'
 container.className = "container"
+
 body.append(container)
 
 
@@ -67,6 +72,77 @@ for (var i = 0; i < 4; i += 1) {
     makeSquares[66].append(makeBlocks[13])
     makeSquares[68].append(makeBlocks[14])
     makeSquares[70].append(makeBlocks[15])
-
   }
 }
+container.append(guy1)
+container.append(guy2)
+
+var guyLeft = 0
+var guyU = 0
+var guy2L = 0
+var guy2U = 0
+
+    function movement(e) {
+      //console.log(e.keyCode)
+      var player1 = $('.player')[0]
+      var player2 = $('.player')[1]
+      if(e.keyCode == 68) {
+        guyLeft += 5
+        player1.style.left = guyLeft + 'px'
+        if (guyLeft >= 335) {
+          guyLeft -= 5
+        }
+      }
+      else if (e.keyCode == 65) {
+        guyLeft -= 5
+        player1.style.left = guyLeft + 'px'
+        if (guyLeft <= -0) {
+          guyLeft += 5
+        }
+      }
+      else if (e.keyCode == 83){
+        guyU += 5
+        player1.style.top = guyU + 'px'
+        if(guyU >= 335) {
+          guyU -= 5
+        }
+      }
+      else if (e.keyCode == 87) {
+        guyU -= 5
+        player1.style.top = guyU + 'px'
+        if(guyU <= -0) {
+          guyU += 5
+        }
+      }
+      // this affects the other objects movement and position
+      else if (e.keyCode == 39) {
+        guy2L += 5
+        player2.style.left = guy2L + "px"
+        if (guy2L >= 335) {
+          guy2L -= 5
+        }
+      }
+      else if (e.keyCode == 37) {
+        guy2L -= 5
+        player2.style.left = guy2L + "px"
+        if(guy2L <= 0) {
+          guy2L += 5
+        }
+      }
+      else if (e.keyCode == 40) {
+        guy2U += 5
+        player2.style.top = guy2U + "px"
+        if (guy2U >= 335) {
+          guy2U -= 5
+        }
+      }
+      else if (e.keyCode == 38) {
+        guy2U -= 5
+        player2.style.top = guy2U + "px"
+        if(guy2U <= 0) {
+          guy2U += 5
+        }
+      }
+    }
+
+document.onkeydown = movement
