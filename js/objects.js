@@ -1,0 +1,5 @@
+// var players = ['player1', 'player2']
+// var bomb = []
+// var fire []
+// var block = []
+// var boxBlock = []
