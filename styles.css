@@ -1,5 +1,4 @@
 .container {
-  width: 200px;
   position: relative;
   margin: 100px auto;
 }
@@ -24,4 +23,10 @@ body {
   width: 30px; height: 30px;
   float: left;
   margin: 5px 5px;
+}
+.bomb {
+  width: 30px; height: 30px;
+  float: left;
+  margin: 5px 5px;
+  background-image: 'bomb_image.png';
 }

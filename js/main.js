@@ -2,18 +2,18 @@ var player1 = document.getElementById('one')
 var player2 = $('#two')
 var game = {
   player1: {
-    keyLeft: 65,
-    keyDown: 83,
-    KeyRight: 68,
-    keyUp: 87,
+    left: 65,
+    down: 83,
+    right: 68,
+    up: 87,
     bomb: 1,
     speed: "5px",
   },
   player2: {
-    keyLeft: 37,
-    keyDown: 40,
-    KeyRight: 39,
-    keyUp: 38,
+    left: 37,
+    down: 40,
+    right: 39,
+    up: 38,
     bomb: 1,
     speed: "5px",
   },
