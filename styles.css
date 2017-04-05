@@ -26,7 +26,8 @@ body {
 }
 .bomb {
   width: 30px; height: 30px;
+  background: green;
   float: left;
   margin: 5px 5px;
-  background-image: 'bomb_image.png';
+  position: relative;
 }
