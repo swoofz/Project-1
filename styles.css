@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 .squares {
   width: 40px; height:40px;

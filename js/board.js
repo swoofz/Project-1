@@ -99,6 +99,8 @@ for(var i = 0; i < getSquare.length; i += 1) {
 
 container.append(guy1)
 container.append(guy2)
+guy1.alive = true
+guy2.alive = true
 
 var guyX = 462
 var guyY = 292
@@ -201,7 +203,6 @@ bomb = {
   number: 1,
   power: 10
 }
-
 
 plantBomb = function () {
   if(keyState[32] || keyState[13] || keyState[18]) {
@@ -624,6 +625,31 @@ plantBomb = function () {
   }
 
   setTimeout (plantBomb, 50)
+}
+
+var $timer = $('#timer')
+var countDown = setInterval(function () {
+  $timer.html(parseInt($timer.text()) - 1)
+  if ($timer.html() == 0){
+    clearInterval(countDown)
+    checkWinner()
+    // console.log('Wow you guys are bad')
+  }
+}, 1000)
+
+function checkWinner() {
+  if (guy1.alive == false && guy2.alive){
+    console.log("Red Wins")
+  }
+  if (guy1.alive && guy2.alive == false) {
+	   console.log('Blue Wins')
+  }
+  if (guy1.alive && guy2.alive) {
+    console.log('Everyone is Alive. Tie')
+  }
+  if (guy1.alive == false && guy2.alive == false) {
+    console.log('TIE by death')
+  }
 }
 
 plantBomb()
