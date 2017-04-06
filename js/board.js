@@ -122,37 +122,106 @@ function moveGuy1() {
     if (guyX <= 40) {
       guyX += 2
     }
-    else if (roadBlocks.posX <= guyX) {
-      guyX += 10
+    if (( guyY >= stops[0].top)  && (guyY <= stops[0].bottom)) {
+      if ( (guyX >= stops[0].left) || (guyX >= stops[1].left) || (guyX >= stops[2].left) || (guyX >= stops[3].left) || (guyX >= stops[4].left)) {
+        guyX += 2
+      }
+    }
+    if (( guyY >= stops[5].top)  && (guyY <= stops[5].bottom)) {
+      if ( (guyX >= stops[0].left) || (guyX >= stops[1].left) || (guyX >= stops[2].left) || (guyX >= stops[3].left) || (guyX >= stops[4].left)) {
+        guyX += 2
+      }
+    }
+    if (( guyY >= stops[10].top)  && (guyY <= stops[10].bottom)) {
+      if ( (guyX >= stops[0].left) || (guyX >= stops[1].left) || (guyX >= stops[2].left) || (guyX >= stops[3].left) || (guyX >= stops[4].left)) {
+        guyX += 2
+      }
     }
   }
-  else if(keyState[39]) {
+  if(keyState[39]) {
     guyX += 2
     if(guyX >= 464){
       guyX -= 2
     }
-    else if (roadBlocks.posX >= guyX) {
-      guyX -= 10
+    if (( guyY >= stops[0].top)  && (guyY <= stops[0].bottom)) {
+      if ( (guyX <= stops[0].right) || (guyX >= stops[0].right) || (guyX >= stops[1].right) || (guyX >= stops[2].right) || (guyX >= stops[3].right) || (guyX >= stops[4].right)) {
+        guyX -= 2
+      }
+    }
+    if (( guyY >= stops[5].top)  && (guyY <= stops[5].bottom)) {
+      if ( (guyX <= stops[0].right) || (guyX >= stops[0].right) || (guyX >= stops[1].right) || (guyX >= stops[2].right) || (guyX >= stops[3].right) || (guyX >= stops[4].right)) {
+        guyX -= 2
+      }
+    }
+    if (( guyY >= stops[10].top)  && (guyY <= stops[10].bottom)) {
+      if ( (guyX <= stops[0].right) || (guyX >= stops[0].right) || (guyX >= stops[1].right) || (guyX >= stops[2].right) || (guyX >= stops[3].right) || (guyX >= stops[4].right)) {
+        guyX -= 2
+      }
     }
   }
-  else if (keyState[40]) {
+  if (keyState[40]) {
     guyY += 2
     if(guyY >= 294) {
       guyY -= 2
     }
-    else if (roadBlocks.posY >= guyY) {
-      guyY -= 10
+    if ( (guyX >= stops[0].left) && (guyX <= stops[0].right) ){
+      if ((guyY >= stops[0].top) || (guyY >= stops[5].top) || (guyY >= stops[11].top)) {
+        guyY -= 2
+      }
+    }
+    if ( (guyX >= stops[1].left) && (guyX <= stops[1].right) ){
+      if ((guyY >= stops[0].top) || (guyY >= stops[5].top) || (guyY >= stops[11].top)) {
+        guyY -= 2
+      }
+    }
+    if ( (guyX >= stops[2].left) && (guyX <= stops[2].right) ){
+      if ((guyY >= stops[0].top) || (guyY >= stops[5].top) || (guyY >= stops[11].top)) {
+        guyY -= 2
+      }
+    }
+    if ( (guyX >= stops[3].left) && (guyX <= stops[3].right) ){
+      if ((guyY >= stops[0].top) || (guyY >= stops[5].top) || (guyY >= stops[11].top)) {
+        guyY -= 2
+      }
+    }
+    if ( (guyX >= stops[4].left) && (guyX <= stops[4].right) ){
+      if ((guyY >= stops[0].top) || (guyY >= stops[5].top) || (guyY >= stops[11].top)) {
+        guyY -= 2
+      }
     }
   }
-  else if (keyState[38]) {
+  if (keyState[38]) {
     guyY -= 2
     if(guyY <= 40) {
       guyY += 2
     }
-    else if (roadBlocks.posY <= guyY) {
-      guyY += 10
+    if ( (guyX >= stops[0].left) && (guyX <= stops[0].right) ){
+      if ((guyY >= stops[0].bottom) || (guyY >= stops[5].bottom) || (guyY >= stops[10].bottom)) {
+        guyY += 2
+      }
+    }
+    if ( (guyX >= stops[1].left) && (guyX <= stops[1].right) ){
+      if ((guyY >= stops[0].bottom) || (guyY >= stops[5].bottom) || (guyY >= stops[10].bottom)) {
+        guyY += 2
+      }
+    }
+    if ( (guyX >= stops[2].left) && (guyX <= stops[2].right) ){
+      if ((guyY >= stops[0].bottom) || (guyY >= stops[5].bottom) || (guyY >= stops[10].bottom)) {
+        guyY += 2
+      }
+    }
+    if ( (guyX >= stops[3].left) && (guyX <= stops[3].right) ){
+      if ((guyY >= stops[0].bottom) || (guyY >= stops[5].bottom) || (guyY >= stops[10].bottom)) {
+        guyY += 2
+      }
+    }
+    if ( (guyX >= stops[4].left) && (guyX <= stops[4].right) ){
+      if ((guyY >= stops[0].bottom) || (guyY >= stops[5].bottom) || (guyY >= stops[10].bottom)) {
+        guyY += 2
+      }
     }
   }
+
 
   var player1 = $('.player')[0]
   player1.style.background = 'blue'
@@ -171,25 +240,106 @@ function moveGuy2() {
     if (guy2X <= 40) {
       guy2X += 2
     }
+    if (( guy2Y >= stops[0].top)  && (guy2Y <= stops[0].bottom)) {
+      if ( (guy2X >= stops[0].left) || (guy2X >= stops[1].left) || (guy2X >= stops[2].left) || (guy2X >= stops[3].left) || (guy2X >= stops[4].left)) {
+        guy2X += 2
+      }
+    }
+    if (( guy2Y >= stops[5].top)  && (guy2Y <= stops[5].bottom)) {
+      if ( (guy2X >= stops[0].left) || (guy2X >= stops[1].left) || (guy2X >= stops[2].left) || (guy2X >= stops[3].left) || (guy2X >= stops[4].left)) {
+        guy2X += 2
+      }
+    }
+    if (( guy2Y >= stops[10].top)  && (guy2Y <= stops[10].bottom)) {
+      if ( (guy2X >= stops[0].left) || (guy2X >= stops[1].left) || (guy2X >= stops[2].left) || (guy2X >= stops[3].left) || (guy2X >= stops[4].left)) {
+        guy2X += 2
+      }
+    }
   }
-  else if(keyState[68]) {
+  if(keyState[68]) {
     guy2X += 2
     if (guy2X >= 464) {
       guy2X -= 2
     }
+    if (( guy2Y >= stops[0].top)  && (guy2Y <= stops[0].bottom)) {
+      if ( (guy2X <= stops[0].right) || (guy2X >= stops[0].right) || (guy2X >= stops[1].right) || (guy2X >= stops[2].right) || (guy2X >= stops[3].right) || (guy2X >= stops[4].right)) {
+        guy2X -= 2
+      }
+    }
+    if (( guy2Y >= stops[5].top)  && (guy2Y <= stops[5].bottom)) {
+      if ( (guy2X <= stops[0].right) || (guy2X >= stops[0].right) || (guy2X >= stops[1].right) || (guy2X >= stops[2].right) || (guy2X >= stops[3].right) || (guy2X >= stops[4].right)) {
+        guy2X -= 2
+      }
+    }
+    if (( guy2Y >= stops[10].top)  && (guy2Y <= stops[10].bottom)) {
+      if ( (guy2X <= stops[0].right) || (guy2X >= stops[0].right) || (guy2X >= stops[1].right) || (guy2X >= stops[2].right) || (guy2X >= stops[3].right) || (guy2X >= stops[4].right)) {
+        guy2X -= 2
+      }
+    }
   }
-  else if (keyState[83]) {
+  if (keyState[83]) {
     guy2Y += 2
     if (guy2Y >= 294) {
       guy2Y -= 2
     }
+    if ( (guy2X >= stops[0].left) && (guy2X <= stops[0].right) ){
+      if ((guy2Y >= stops[0].top) || (guy2Y >= stops[5].top) || (guy2Y >= stops[11].top)) {
+        guy2Y -= 2
+      }
+    }
+    if ( (guy2X >= stops[1].left) && (guy2X <= stops[1].right) ){
+      if ((guy2Y >= stops[0].top) || (guy2Y >= stops[5].top) || (guy2Y >= stops[11].top)) {
+        guy2Y -= 2
+      }
+    }
+    if ( (guy2X >= stops[2].left) && (guy2X <= stops[2].right) ){
+      if ((guy2Y >= stops[0].top) || (guy2Y >= stops[5].top) || (guy2Y >= stops[11].top)) {
+        guy2Y -= 2
+      }
+    }
+    if ( (guy2X >= stops[3].left) && (guy2X <= stops[3].right) ){
+      if ((guy2Y >= stops[0].top) || (guy2Y >= stops[5].top) || (guy2Y >= stops[11].top)) {
+        guy2Y -= 2
+      }
+    }
+    if ( (guy2X >= stops[4].left) && (guy2X <= stops[4].right) ){
+      if ((guy2Y >= stops[0].top) || (guy2Y >= stops[5].top) || (guy2Y >= stops[11].top)) {
+        guy2Y -= 2
+      }
+    }
   }
-  else if (keyState[87]) {
+  if (keyState[87]) {
     guy2Y-= 2
     if (guy2Y <= 40) {
       guy2Y += 2
     }
+    if ( (guy2X >= stops[0].left) && (guy2X <= stops[0].right) ){
+      if ((guy2Y >= stops[0].bottom) || (guy2Y >= stops[5].bottom) || (guy2Y >= stops[10].bottom)) {
+        guy2Y += 2
+      }
+    }
+    if ( (guy2X >= stops[1].left) && (guy2X <= stops[1].right) ){
+      if ((guy2Y >= stops[0].bottom) || (guy2Y >= stops[5].bottom) || (guy2Y >= stops[10].bottom)) {
+        guy2Y += 2
+      }
+    }
+    if ( (guy2X >= stops[2].left) && (guy2X <= stops[2].right) ){
+      if ((guy2Y >= stops[0].bottom) || (guy2Y >= stops[5].bottom) || (guy2Y >= stops[10].bottom)) {
+        guy2Y += 2
+      }
+    }
+    if ( (guy2X >= stops[3].left) && (guy2X <= stops[3].right) ){
+      if ((guy2Y >= stops[0].bottom) || (guy2Y >= stops[5].bottom) || (guy2Y >= stops[10].bottom)) {
+        guy2Y += 2
+      }
+    }
+    if ( (guy2X >= stops[4].left) && (guy2X <= stops[4].right) ){
+      if ((guy2Y >= stops[0].bottom) || (guy2Y >= stops[5].bottom) || (guy2Y >= stops[10].bottom)) {
+        guy2Y += 2
+      }
+    }
   }
+  //Example
 
   var player2 = $('.player')[1]
   player2.style.left = guy2X + 'px'
@@ -198,10 +348,36 @@ function moveGuy2() {
   setTimeout(moveGuy2, 10)
 }
 
+function Stop(number, top, bottom, right, left) {
+  this.name = number
+  this.top = top
+  this.bottom = bottom
+  this.right = right
+  this.left = left
+}
+var stops = [
+  new Stop(0, 50, 118, 118, 50),
+  new Stop(1, 50, 118, 204, 132),
+  new Stop(2, 50, 118, 288, 214),
+  new Stop(3, 50, 118, 370, 298),
+  new Stop(4, 50, 118, 456, 384),
+  new Stop(5, 134, 202, 118, 50),
+  new Stop(6, 134, 202, 204, 132),
+  new Stop(7, 134, 202, 288, 214),
+  new Stop(8, 134, 202, 370, 298),
+  new Stop(9, 134, 202, 456, 384),
+  new Stop(10, 216, 286, 118, 50),
+  new Stop(11, 216, 286, 204, 132),
+  new Stop(12, 216, 286, 288, 214),
+  new Stop(13, 216, 286, 370, 298),
+  new Stop(14, 216, 286, 456, 384),
+]
+
 bomb = {
   is: document.createElement('div'),
   number: 1,
-  power: 10
+  power: 10,
+  explode: false
 }
 
 plantBomb = function () {
@@ -410,8 +586,10 @@ plantBomb = function () {
       }
     }
     $(".bomb").fadeOut(3000, function () {
+      bomb.explode = true
       $(".bomb").fadeIn(1, function (){
         $(this).remove()
+        bomb.explode = false
       })
     })
   }
@@ -618,8 +796,10 @@ plantBomb = function () {
       }
     }
     $(".bomb").fadeOut(3000, function () {
+    bomb.explode = true
       $(".bomb").fadeIn(1, function (){
         $(this).remove()
+        bomb.explode = false
       })
     })
   }
@@ -627,14 +807,36 @@ plantBomb = function () {
   setTimeout (plantBomb, 50)
 }
 
+function bombFire() {
+  bomb.power.className = 'fire'
+  var up = bomb.power
+  var down = bomb.power
+  var right = bomb.power
+  var left = bomb.power
+  var whereBomb = $(bombDown)
+  var fire = $(getSquare)
+  whereBomb.eq += right
+  fire.eq(whereBomb).append(up)
+  fire.eq(whereBomb).append(down)
+  fire.eq(whereBomb).append(right)
+  fire.eq(whereBomb).append(left)
+}
+bombFire()
+
 var $timer = $('#timer')
 var countDown = setInterval(function () {
   $timer.html(parseInt($timer.text()) - 1)
+  if (guy1.alive == false) {
+    clearInterval(countDown)
+  }
+  if (guy2.alive == false) {
+    clearInterval(countDown)
+  }
   if ($timer.html() == 0){
     clearInterval(countDown)
-    checkWinner()
-    // console.log('Wow you guys are bad')
+    // console.log('Wow you guys are bad. Tie')
   }
+  checkWinner()
 }, 1000)
 
 function checkWinner() {
@@ -644,13 +846,14 @@ function checkWinner() {
   if (guy1.alive && guy2.alive == false) {
 	   console.log('Blue Wins')
   }
-  if (guy1.alive && guy2.alive) {
+  if (guy1.alive && guy2.alive && $timer.html() == 0) {
     console.log('Everyone is Alive. Tie')
   }
   if (guy1.alive == false && guy2.alive == false) {
     console.log('TIE by death')
   }
 }
+
 
 plantBomb()
 moveGuy1()

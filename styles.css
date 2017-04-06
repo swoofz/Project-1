@@ -31,6 +31,13 @@ body {
   margin: 5px 5px;
   position: relative;
 }
+.fire {
+  width: 30px; height: 30px;
+  background: orange;
+  float: left;
+  margin: 5px 5px;
+  position: relative;
+}
 h1 {
   color: purple;
   font-size: 52px;
