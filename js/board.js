@@ -385,64 +385,64 @@ plantBomb = function (pos) {
   fire.className = 'fire'
   var $fire = $(fire)
   if(keyState[32] || keyState[13] || keyState[18]) {
-    if (guyY < 60) {
-      if (guyX < 60){
-        getSquare[0].append(bombDown[0])
-        getSquare[0].append(fire)
-        getSquare[1].append(fire)
-        getSquare[11].append(fire)
-      }
-      if (guyX > 60 && guyX < 107){
-          getSquare[1].append(bombDown[1])
-      }
-      if (guyX > 107 && guyX < 147) {
-        getSquare[2].append(bombDown[2])
-      }
-      if (guyX > 147 && guyX < 187) {
-        getSquare[3].append(bombDown[3])
-      }
-      if (guyX > 187 && guyX < 227) {
-        getSquare[4].append(bombDown[4])
-      }
-      if (guyX > 227 && guyX < 267) {
-        getSquare[5].append(bombDown[5])
-      }
-      if (guyX > 267 && guyX < 307) {
-        getSquare[6].append(bombDown[6])
-      }
-      if (guyX > 307 && guyX < 347) {
-        getSquare[7].append(bombDown[7])
-      }
-      if (guyX > 347 && guyX < 387) {
-        getSquare[8].append(bombDown[8])
-      }
-      if (guyX > 387 && guyX < 427) {
-        getSquare[9].append(bombDown[9])
-      }
-      if (guyX > 427 && guyX < 467) {
-        getSquare[10].append(bombDown[10])
-      }
-    }
-    if (guyY > 60 && guyY < 107) {
-      if (guyX < 60) {
-        getSquare[11].append(bombDown[11])
-      }
-      if (guyX > 107 && guyX < 147) {
-        getSquare[12].append(bombDown[12])
-      }
-      if (guyX > 187 && guyX < 227) {
-        getSquare[13].append(bombDown[13])
-      }
-      if (guyX > 267 && guyX < 307) {
-        getSquare[14].append(bombDown[14])
-      }
-      if (guyX > 347 && guyX < 387) {
-        getSquare[15].append(bombDown[15])
-      }
-      if (guyX > 427 && guyX < 467) {
-        getSquare[16].append(bombDown[16])
-      }
-    }
+    // if (guyY < 60) {
+    //   if (guyX < 60){
+    //     getSquare[0].append(bombDown[0])
+    //     // getSquare[0].append(fire)
+    //     // getSquare[1].append(fire)
+    //     // getSquare[11].append(fire)
+    //   }
+    //   if (guyX > 60 && guyX < 107){
+    //       getSquare[1].append(bombDown[1])
+    //   }
+    //   if (guyX > 107 && guyX < 147) {
+    //     getSquare[2].append(bombDown[2])
+    //   }
+    //   if (guyX > 147 && guyX < 187) {
+    //     getSquare[3].append(bombDown[3])
+    //   }
+    //   if (guyX > 187 && guyX < 227) {
+    //     getSquare[4].append(bombDown[4])
+    //   }
+    //   if (guyX > 227 && guyX < 267) {
+    //     getSquare[5].append(bombDown[5])
+    //   }
+    //   if (guyX > 267 && guyX < 307) {
+    //     getSquare[6].append(bombDown[6])
+    //   }
+    //   if (guyX > 307 && guyX < 347) {
+    //     getSquare[7].append(bombDown[7])
+    //   }
+    //   if (guyX > 347 && guyX < 387) {
+    //     getSquare[8].append(bombDown[8])
+    //   }
+    //   if (guyX > 387 && guyX < 427) {
+    //     getSquare[9].append(bombDown[9])
+    //   }
+    //   if (guyX > 427 && guyX < 467) {
+    //     getSquare[10].append(bombDown[10])
+    //   }
+    // }
+    // if (guyY > 60 && guyY < 107) {
+    //   if (guyX < 60) {
+    //     getSquare[11].append(bombDown[11])
+    //   }
+    //   if (guyX > 107 && guyX < 147) {
+    //     getSquare[12].append(bombDown[12])
+    //   }
+    //   if (guyX > 187 && guyX < 227) {
+    //     getSquare[13].append(bombDown[13])
+    //   }
+    //   if (guyX > 267 && guyX < 307) {
+    //     getSquare[14].append(bombDown[14])
+    //   }
+    //   if (guyX > 347 && guyX < 387) {
+    //     getSquare[15].append(bombDown[15])
+    //   }
+    //   if (guyX > 427 && guyX < 467) {
+    //     getSquare[16].append(bombDown[16])
+    //   }
+    // }
     if (guyY > 107 && guyY < 147) {
       if (guyX < 60){
         getSquare[17].append(bombDown[17])
@@ -478,117 +478,121 @@ plantBomb = function (pos) {
         getSquare[27].append(bombDown[27])
       }
     }
-    if (guyY > 147 && guyY < 187) {
-      if (guyX < 60) {
-        getSquare[28].append(bombDown[28])
-      }
-      if (guyX > 107 && guyX < 147) {
-        getSquare[29].append(bombDown[29])
-      }
-      if (guyX > 187 && guyX < 227) {
-        getSquare[30].append(bombDown[30])
-      }
-      if (guyX > 267 && guyX < 307) {
-        getSquare[31].append(bombDown[31])
-      }
-      if (guyX > 347 && guyX < 387) {
-        getSquare[32].append(bombDown[32])
-      }
-      if (guyX > 427 && guyX < 467) {
-        getSquare[33].append(bombDown[33])
-      }
-    }
-    if (guyY > 187 && guyY < 227) {
-      if (guyX < 60){
-        getSquare[34].append(bombDown[34])
-      }
-      if (guyX > 60 && guyX < 107){
-          getSquare[35].append(bombDown[35])
-      }
-      if (guyX > 107 && guyX < 147) {
-        getSquare[36].append(bombDown[36])
-      }
-      if (guyX > 147 && guyX < 187) {
-        getSquare[37].append(bombDown[37])
-      }
-      if (guyX > 187 && guyX < 227) {
-        getSquare[38].append(bombDown[38])
-      }
-      if (guyX > 227 && guyX < 267) {
-        getSquare[39].append(bombDown[39])
-      }
-      if (guyX > 267 && guyX < 307) {
-        getSquare[40].append(bombDown[40])
-      }
-      if (guyX > 307 && guyX < 347) {
-        getSquare[41].append(bombDown[41])
-      }
-      if (guyX > 347 && guyX < 387) {
-        getSquare[42].append(bombDown[42])
-      }
-      if (guyX > 387 && guyX < 427) {
-        getSquare[43].append(bombDown[43])
-      }
-      if (guyX > 427 && guyX < 467) {
-        getSquare[44].append(bombDown[44])
-      }
-    }
-    if (guyY > 227 && guyY < 267) {
-      if (guyX < 60) {
-        getSquare[45].append(bombDown[45])
-      }
-      if (guyX > 107 && guyX < 147) {
-        getSquare[46].append(bombDown[46])
-      }
-      if (guyX > 187 && guyX < 227) {
-        getSquare[47].append(bombDown[47])
-      }
-      if (guyX > 267 && guyX < 307) {
-        getSquare[48].append(bombDown[48])
-      }
-      if (guyX > 347 && guyX < 387) {
-        getSquare[49].append(bombDown[49])
-      }
-      if (guyX > 427 && guyX < 467) {
-        getSquare[50].append(bombDown[50])
-      }
-    }
-    if (guyY > 267 && guyY < 307) {
-      if (guyX < 60){
-        getSquare[51].append(bombDown[51])
-      }
-      if (guyX > 60 && guyX < 107){
-          getSquare[52].append(bombDown[52])
-      }
-      if (guyX > 107 && guyX < 147) {
-        getSquare[53].append(bombDown[53])
-      }
-      if (guyX > 147 && guyX < 187) {
-        getSquare[54].append(bombDown[54])
-      }
-      if (guyX > 187 && guyX < 227) {
-        getSquare[55].append(bombDown[55])
-      }
-      if (guyX > 227 && guyX < 267) {
-        getSquare[56].append(bombDown[56])
-      }
-      if (guyX > 267 && guyX < 307) {
-        getSquare[57].append(bombDown[57])
-      }
-      if (guyX > 307 && guyX < 347) {
-        getSquare[58].append(bombDown[58])
-      }
-      if (guyX > 347 && guyX < 387) {
-        getSquare[59].append(bombDown[59])
-      }
-      if (guyX > 387 && guyX < 427) {
-        getSquare[60].append(bombDown[60])
-      }
-      if (guyX > 427 && guyX < 467) {
-        getSquare[61].append(bombDown[61])
-      }
-    }
+    // if (guyY > 147 && guyY < 187) {
+    //   if (guyX < 60) {
+    //     getSquare[28].append(bombDown[28])
+    //   }
+    //   if (guyX > 107 && guyX < 147) {
+    //     getSquare[29].append(bombDown[29])
+    //   }
+    //   if (guyX > 187 && guyX < 227) {
+    //     getSquare[30].append(bombDown[30])
+    //   }
+    //   if (guyX > 267 && guyX < 307) {
+    //     getSquare[31].append(bombDown[31])
+    //   }
+    //   if (guyX > 347 && guyX < 387) {
+    //     getSquare[32].append(bombDown[32])
+    //   }
+    //   if (guyX > 427 && guyX < 467) {
+    //     getSquare[33].append(bombDown[33])
+    //   }
+    // }
+    // if (guyY > 187 && guyY < 227) {
+    //   if (guyX < 60){
+    //     getSquare[34].append(bombDown[34])
+    //   }
+    //   if (guyX > 60 && guyX < 107){
+    //       getSquare[35].append(bombDown[35])
+    //   }
+    //   if (guyX > 107 && guyX < 147) {
+    //     getSquare[36].append(bombDown[36])
+    //   }
+    //   if (guyX > 147 && guyX < 187) {
+    //     getSquare[37].append(bombDown[37])
+    //   }
+    //   if (guyX > 187 && guyX < 227) {
+    //     getSquare[38].append(bombDown[38])
+    //   }
+    //   if (guyX > 227 && guyX < 267) {
+    //     getSquare[39].append(bombDown[39])
+    //   }
+    //   if (guyX > 267 && guyX < 307) {
+    //     getSquare[40].append(bombDown[40])
+    //   }
+    //   if (guyX > 307 && guyX < 347) {
+    //     getSquare[41].append(bombDown[41])
+    //   }
+    //   if (guyX > 347 && guyX < 387) {
+    //     getSquare[42].append(bombDown[42])
+    //   }
+    //   if (guyX > 387 && guyX < 427) {
+    //     getSquare[43].append(bombDown[43])
+    //   }
+    //   if (guyX > 427 && guyX < 467) {
+    //     getSquare[44].append(bombDown[44])
+    //   }
+    // }
+    // if (guyY > 227 && guyY < 267) {
+    //   if (guyX < 60) {
+    //     getSquare[45].append(bombDown[45])
+    //   }
+    //   if (guyX > 107 && guyX < 147) {
+    //     getSquare[46].append(bombDown[46])
+    //   }
+    //   if (guyX > 187 && guyX < 227) {
+    //     getSquare[47].append(bombDown[47])
+    //   }
+    //   if (guyX > 267 && guyX < 307) {
+    //     getSquare[48].append(bombDown[48])
+    //   }
+    //   if (guyX > 347 && guyX < 387) {
+    //     getSquare[49].append(bombDown[49])
+    //   }
+    //   if (guyX > 427 && guyX < 467) {
+    //     getSquare[50].append(bombDown[50])
+    //   }
+    // }
+    // if (guyY > 267 && guyY < 307) {
+    //   if (guyX < 60){
+    //     getSquare[51].append(bombDown[51])
+    //   }
+    //   if (guyX > 60 && guyX < 107){
+    //       getSquare[52].append(bombDown[52])
+    //   }
+    //   if (guyX > 107 && guyX < 147) {
+    //     getSquare[53].append(bombDown[53])
+    //   }
+    //   if (guyX > 147 && guyX < 187) {
+    //     getSquare[54].append(bombDown[54])
+    //   }
+    //   if (guyX > 187 && guyX < 227) {
+    //     getSquare[55].append(bombDown[55])
+    //   }
+    //   if (guyX > 227 && guyX < 267) {
+    //     getSquare[56].append(bombDown[56])
+    //   }
+    //   if (guyX > 267 && guyX < 307) {
+    //     getSquare[57].append(bombDown[57])
+    //   }
+    //   if (guyX > 307 && guyX < 347) {
+    //     getSquare[58].append(bombDown[58])
+    //   }
+    //   if (guyX > 347 && guyX < 387) {
+    //     getSquare[59].append(bombDown[59])
+    //   }
+    //   if (guyX > 387 && guyX < 427) {
+    //     getSquare[60].append(bombDown[60])
+    //   }
+    //   if (guyX > 427 && guyX < 467) {
+    //     getSquare[61].append(bombDown[61])
+    //   }
+    // }
+    bombDown[secondRan].explode = true
     $(".bomb").fadeOut(3000, function () {
+      if (bombDown[secondRan].explode == true) {
+        guy2.alive = false
+      }
       bomb.explode = true
       $(".bomb").fadeIn(1, function (){
         $(this).remove()
@@ -597,151 +601,151 @@ plantBomb = function (pos) {
     })
   }
   else if(keyState[16]) {
-    if (guy2Y < 60) {
-      if (guy2X < 60){
-        getSquare[0].append(bombDown[0])
-      }
-      if (guy2X > 60 && guy2X < 107){
-          getSquare[1].append(bombDown[1])
-      }
-      if (guy2X > 107 && guy2X < 147) {
-        getSquare[2].append(bombDown[2])
-      }
-      if (guy2X > 147 && guy2X < 187) {
-        getSquare[3].append(bombDown[3])
-      }
-      if (guy2X > 187 && guy2X < 227) {
-        getSquare[4].append(bombDown[4])
-      }
-      if (guy2X > 227 && guy2X < 267) {
-        getSquare[5].append(bombDown[5])
-      }
-      if (guy2X > 267 && guy2X < 307) {
-        getSquare[6].append(bombDown[6])
-      }
-      if (guy2X > 307 && guy2X < 347) {
-        getSquare[7].append(bombDown[7])
-      }
-      if (guy2X > 347 && guy2X < 387) {
-        getSquare[8].append(bombDown[8])
-      }
-      if (guy2X > 387 && guy2X < 427) {
-        getSquare[9].append(bombDown[9])
-      }
-      if (guy2X > 427 && guy2X < 467) {
-        getSquare[10].append(bombDown[10])
-      }
-    }
-    if (guy2Y > 60 && guy2Y < 107) {
-      if (guy2X < 60) {
-        getSquare[11].append(bombDown[11])
-      }
-      if (guy2X > 107 && guy2X < 147) {
-        getSquare[12].append(bombDown[12])
-      }
-      if (guy2X > 187 && guy2X < 227) {
-        getSquare[13].append(bombDown[13])
-      }
-      if (guy2X > 267 && guy2X < 307) {
-        getSquare[14].append(bombDown[14])
-      }
-      if (guy2X > 347 && guy2X < 387) {
-        getSquare[15].append(bombDown[15])
-      }
-      if (guy2X > 427 && guy2X < 467) {
-        getSquare[16].append(bombDown[16])
-      }
-    }
-    if (guy2Y > 107 && guy2Y < 147) {
-      if (guy2X < 60){
-        getSquare[17].append(bombDown[17])
-      }
-      if (guy2X > 60 && guy2X < 107){
-          getSquare[18].append(bombDown[18])
-      }
-      if (guy2X > 107 && guy2X < 147) {
-        getSquare[19].append(bombDown[19])
-      }
-      if (guy2X > 147 && guy2X < 187) {
-        getSquare[20].append(bombDown[20])
-      }
-      if (guy2X > 187 && guy2X < 227) {
-        getSquare[21].append(bombDown[21])
-      }
-      if (guy2X > 227 && guy2X < 267) {
-        getSquare[22].append(bombDown[22])
-      }
-      if (guy2X > 267 && guy2X < 307) {
-        getSquare[23].append(bombDown[23])
-      }
-      if (guy2X > 307 && guy2X < 347) {
-        getSquare[24].append(bombDown[24])
-      }
-      if (guy2X > 347 && guy2X < 387) {
-        getSquare[25].append(bombDown[25])
-      }
-      if (guy2X > 387 && guy2X < 427) {
-        getSquare[26].append(bombDown[26])
-      }
-      if (guy2X > 427 && guy2X < 467) {
-        getSquare[27].append(bombDown[27])
-      }
-    }
-    if (guy2Y > 147 && guy2Y < 187) {
-      if (guy2X < 60) {
-        getSquare[28].append(bombDown[28])
-      }
-      if (guy2X > 107 && guy2X < 147) {
-        getSquare[29].append(bombDown[29])
-      }
-      if (guy2X > 187 && guy2X < 227) {
-        getSquare[30].append(bombDown[30])
-      }
-      if (guy2X > 267 && guy2X < 307) {
-        getSquare[31].append(bombDown[31])
-      }
-      if (guy2X > 347 && guy2X < 387) {
-        getSquare[32].append(bombDown[32])
-      }
-      if (guy2X > 427 && guy2X < 467) {
-        getSquare[33].append(bombDown[33])
-      }
-    }
-    if (guy2Y > 187 && guy2Y < 227) {
-      if (guy2X < 60){
-        getSquare[34].append(bombDown[34])
-      }
-      if (guy2X > 60 && guy2X < 107){
-          getSquare[35].append(bombDown[35])
-      }
-      if (guy2X > 107 && guy2X < 147) {
-        getSquare[36].append(bombDown[36])
-      }
-      if (guy2X > 147 && guy2X < 187) {
-        getSquare[37].append(bombDown[37])
-      }
-      if (guy2X > 187 && guy2X < 227) {
-        getSquare[38].append(bombDown[38])
-      }
-      if (guy2X > 227 && guy2X < 267) {
-        getSquare[39].append(bombDown[39])
-      }
-      if (guy2X > 267 && guy2X < 307) {
-        getSquare[40].append(bombDown[40])
-      }
-      if (guy2X > 307 && guy2X < 347) {
-        getSquare[41].append(bombDown[41])
-      }
-      if (guy2X > 347 && guy2X < 387) {
-        getSquare[42].append(bombDown[42])
-      }
-      if (guy2X > 387 && guy2X < 427) {
-        getSquare[43].append(bombDown[43])
-      }
-      if (guy2X > 427 && guy2X < 467) {
-        getSquare[44].append(bombDown[44])
-      }
-    }
+    // if (guy2Y < 60) {
+    //   if (guy2X < 60){
+    //     getSquare[0].append(bombDown[0])
+    //   }
+    //   if (guy2X > 60 && guy2X < 107){
+    //       getSquare[1].append(bombDown[1])
+    //   }
+    //   if (guy2X > 107 && guy2X < 147) {
+    //     getSquare[2].append(bombDown[2])
+    //   }
+    //   if (guy2X > 147 && guy2X < 187) {
+    //     getSquare[3].append(bombDown[3])
+    //   }
+    //   if (guy2X > 187 && guy2X < 227) {
+    //     getSquare[4].append(bombDown[4])
+    //   }
+    //   if (guy2X > 227 && guy2X < 267) {
+    //     getSquare[5].append(bombDown[5])
+    //   }
+    //   if (guy2X > 267 && guy2X < 307) {
+    //     getSquare[6].append(bombDown[6])
+    //   }
+    //   if (guy2X > 307 && guy2X < 347) {
+    //     getSquare[7].append(bombDown[7])
+    //   }
+    //   if (guy2X > 347 && guy2X < 387) {
+    //     getSquare[8].append(bombDown[8])
+    //   }
+    //   if (guy2X > 387 && guy2X < 427) {
+    //     getSquare[9].append(bombDown[9])
+    //   }
+    //   if (guy2X > 427 && guy2X < 467) {
+    //     getSquare[10].append(bombDown[10])
+    //   }
+    // }
+    // if (guy2Y > 60 && guy2Y < 107) {
+    //   if (guy2X < 60) {
+    //     getSquare[11].append(bombDown[11])
+    //   }
+    //   if (guy2X > 107 && guy2X < 147) {
+    //     getSquare[12].append(bombDown[12])
+    //   }
+    //   if (guy2X > 187 && guy2X < 227) {
+    //     getSquare[13].append(bombDown[13])
+    //   }
+    //   if (guy2X > 267 && guy2X < 307) {
+    //     getSquare[14].append(bombDown[14])
+    //   }
+    //   if (guy2X > 347 && guy2X < 387) {
+    //     getSquare[15].append(bombDown[15])
+    //   }
+    //   if (guy2X > 427 && guy2X < 467) {
+    //     getSquare[16].append(bombDown[16])
+    //   }
+    // }
+    // if (guy2Y > 107 && guy2Y < 147) {
+    //   if (guy2X < 60){
+    //     getSquare[17].append(bombDown[17])
+    //   }
+    //   if (guy2X > 60 && guy2X < 107){
+    //       getSquare[18].append(bombDown[18])
+    //   }
+    //   if (guy2X > 107 && guy2X < 147) {
+    //     getSquare[19].append(bombDown[19])
+    //   }
+    //   if (guy2X > 147 && guy2X < 187) {
+    //     getSquare[20].append(bombDown[20])
+    //   }
+    //   if (guy2X > 187 && guy2X < 227) {
+    //     getSquare[21].append(bombDown[21])
+    //   }
+    //   if (guy2X > 227 && guy2X < 267) {
+    //     getSquare[22].append(bombDown[22])
+    //   }
+    //   if (guy2X > 267 && guy2X < 307) {
+    //     getSquare[23].append(bombDown[23])
+    //   }
+    //   if (guy2X > 307 && guy2X < 347) {
+    //     getSquare[24].append(bombDown[24])
+    //   }
+    //   if (guy2X > 347 && guy2X < 387) {
+    //     getSquare[25].append(bombDown[25])
+    //   }
+    //   if (guy2X > 387 && guy2X < 427) {
+    //     getSquare[26].append(bombDown[26])
+    //   }
+    //   if (guy2X > 427 && guy2X < 467) {
+    //     getSquare[27].append(bombDown[27])
+    //   }
+    // }
+    // if (guy2Y > 147 && guy2Y < 187) {
+    //   if (guy2X < 60) {
+    //     getSquare[28].append(bombDown[28])
+    //   }
+    //   if (guy2X > 107 && guy2X < 147) {
+    //     getSquare[29].append(bombDown[29])
+    //   }
+    //   if (guy2X > 187 && guy2X < 227) {
+    //     getSquare[30].append(bombDown[30])
+    //   }
+    //   if (guy2X > 267 && guy2X < 307) {
+    //     getSquare[31].append(bombDown[31])
+    //   }
+    //   if (guy2X > 347 && guy2X < 387) {
+    //     getSquare[32].append(bombDown[32])
+    //   }
+    //   if (guy2X > 427 && guy2X < 467) {
+    //     getSquare[33].append(bombDown[33])
+    //   }
+    // }
+    // if (guy2Y > 187 && guy2Y < 227) {
+    //   if (guy2X < 60){
+    //     getSquare[34].append(bombDown[34])
+    //   }
+    //   if (guy2X > 60 && guy2X < 107){
+    //       getSquare[35].append(bombDown[35])
+    //   }
+    //   if (guy2X > 107 && guy2X < 147) {
+    //     getSquare[36].append(bombDown[36])
+    //   }
+    //   if (guy2X > 147 && guy2X < 187) {
+    //     getSquare[37].append(bombDown[37])
+    //   }
+    //   if (guy2X > 187 && guy2X < 227) {
+    //     getSquare[38].append(bombDown[38])
+    //   }
+    //   if (guy2X > 227 && guy2X < 267) {
+    //     getSquare[39].append(bombDown[39])
+    //   }
+    //   if (guy2X > 267 && guy2X < 307) {
+    //     getSquare[40].append(bombDown[40])
+    //   }
+    //   if (guy2X > 307 && guy2X < 347) {
+    //     getSquare[41].append(bombDown[41])
+    //   }
+    //   if (guy2X > 347 && guy2X < 387) {
+    //     getSquare[42].append(bombDown[42])
+    //   }
+    //   if (guy2X > 387 && guy2X < 427) {
+    //     getSquare[43].append(bombDown[43])
+    //   }
+    //   if (guy2X > 427 && guy2X < 467) {
+    //     getSquare[44].append(bombDown[44])
+    //   }
+    // }
     if (guy2Y > 227 && guy2Y < 267) {
       if (guy2X < 60) {
         getSquare[45].append(bombDown[45])
@@ -762,42 +766,46 @@ plantBomb = function (pos) {
         getSquare[50].append(bombDown[50])
       }
     }
-    if (guy2Y > 267 && guy2Y < 307) {
-      if (guy2X < 60){
-        getSquare[51].append(bombDown[51])
-      }
-      if (guy2X > 60 && guy2X < 107){
-          getSquare[52].append(bombDown[52])
-      }
-      if (guy2X > 107 && guy2X < 147) {
-        getSquare[53].append(bombDown[53])
-      }
-      if (guy2X > 147 && guy2X < 187) {
-        getSquare[54].append(bombDown[54])
-      }
-      if (guy2X > 187 && guy2X < 227) {
-        getSquare[55].append(bombDown[55])
-      }
-      if (guy2X > 227 && guy2X < 267) {
-        getSquare[56].append(bombDown[56])
-      }
-      if (guy2X > 267 && guy2X < 307) {
-        getSquare[57].append(bombDown[57])
-      }
-      if (guy2X > 307 && guy2X < 347) {
-        getSquare[58].append(bombDown[58])
-      }
-      if (guy2X > 347 && guy2X < 387) {
-        getSquare[59].append(bombDown[59])
-      }
-      if (guy2X > 387 && guy2X < 427) {
-        getSquare[60].append(bombDown[60])
-      }
-      if (guy2X > 427 && guy2X < 467) {
-        getSquare[61].append(bombDown[61])
-      }
-    }
+    // if (guy2Y > 267 && guy2Y < 307) {
+    //   if (guy2X < 60){
+    //     getSquare[51].append(bombDown[51])
+    //   }
+    //   if (guy2X > 60 && guy2X < 107){
+    //       getSquare[52].append(bombDown[52])
+    //   }
+    //   if (guy2X > 107 && guy2X < 147) {
+    //     getSquare[53].append(bombDown[53])
+    //   }
+    //   if (guy2X > 147 && guy2X < 187) {
+    //     getSquare[54].append(bombDown[54])
+    //   }
+    //   if (guy2X > 187 && guy2X < 227) {
+    //     getSquare[55].append(bombDown[55])
+    //   }
+    //   if (guy2X > 227 && guy2X < 267) {
+    //     getSquare[56].append(bombDown[56])
+    //   }
+    //   if (guy2X > 267 && guy2X < 307) {
+    //     getSquare[57].append(bombDown[57])
+    //   }
+    //   if (guy2X > 307 && guy2X < 347) {
+    //     getSquare[58].append(bombDown[58])
+    //   }
+    //   if (guy2X > 347 && guy2X < 387) {
+    //     getSquare[59].append(bombDown[59])
+    //   }
+    //   if (guy2X > 387 && guy2X < 427) {
+    //     getSquare[60].append(bombDown[60])
+    //   }
+    //   if (guy2X > 427 && guy2X < 467) {
+    //     getSquare[61].append(bombDown[61])
+    //   }
+    // }
+    bombDown[firstRan].explode = true
     $(".bomb").fadeOut(3000, function () {
+      if (bombDown[firstRan].explode == true) {
+        guy1.alive = false
+      }
     bomb.explode = true
       $(".bomb").fadeIn(1, function (){
         $(this).remove()
@@ -932,7 +940,15 @@ function checkWinner() {
     alert('Tie')
   }
 }
-
+var firstRan = Math.floor(Math.random() * 61)
+var secondRan = Math.floor(Math.random() * 61)
+bombDown[firstRan].explode = false
+if (bombDown[firstRan].explode == true) {
+  guy1.alive = false
+}
+if (bombDown[secondRan].explode == true) {
+  guy2.alive = false
+}
 
 plantBomb()
 moveGuy1()
