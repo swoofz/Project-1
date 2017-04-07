@@ -444,39 +444,39 @@ plantBomb = function (pos) {
     //   }
     // }
     if (guyY > 107 && guyY < 147) {
-      if (guyX < 60){
-        getSquare[17].append(bombDown[17])
-      }
-      if (guyX > 60 && guyX < 107){
-          getSquare[18].append(bombDown[18])
-      }
-      if (guyX > 107 && guyX < 147) {
-        getSquare[19].append(bombDown[19])
-      }
+      // if (guyX < 60){
+      //   getSquare[17].append(bombDown[17])
+      // }
+      // if (guyX > 60 && guyX < 107){
+      //     getSquare[18].append(bombDown[18])
+      // }
+      // if (guyX > 107 && guyX < 147) {
+      //   getSquare[19].append(bombDown[19])
+      // }
       if (guyX > 147 && guyX < 187) {
         getSquare[20].append(bombDown[20])
       }
       if (guyX > 187 && guyX < 227) {
         getSquare[21].append(bombDown[21])
       }
-      if (guyX > 227 && guyX < 267) {
-        getSquare[22].append(bombDown[22])
-      }
-      if (guyX > 267 && guyX < 307) {
-        getSquare[23].append(bombDown[23])
-      }
-      if (guyX > 307 && guyX < 347) {
-        getSquare[24].append(bombDown[24])
-      }
+      // if (guyX > 227 && guyX < 267) {
+      //   getSquare[22].append(bombDown[22])
+      // }
+      // if (guyX > 267 && guyX < 307) {
+      //   getSquare[23].append(bombDown[23])
+      // }
+      // if (guyX > 307 && guyX < 347) {
+      //   getSquare[24].append(bombDown[24])
+      // }
       if (guyX > 347 && guyX < 387) {
         getSquare[25].append(bombDown[25])
       }
-      if (guyX > 387 && guyX < 427) {
-        getSquare[26].append(bombDown[26])
-      }
-      if (guyX > 427 && guyX < 467) {
-        getSquare[27].append(bombDown[27])
-      }
+      // if (guyX > 387 && guyX < 427) {
+      //   getSquare[26].append(bombDown[26])
+      // }
+      // if (guyX > 427 && guyX < 467) {
+      //   getSquare[27].append(bombDown[27])
+      // }
     }
     // if (guyY > 147 && guyY < 187) {
     //   if (guyX < 60) {
@@ -747,21 +747,21 @@ plantBomb = function (pos) {
     //   }
     // }
     if (guy2Y > 227 && guy2Y < 267) {
-      if (guy2X < 60) {
-        getSquare[45].append(bombDown[45])
-      }
-      if (guy2X > 107 && guy2X < 147) {
-        getSquare[46].append(bombDown[46])
-      }
+      // if (guy2X < 60) {
+      //   getSquare[45].append(bombDown[45])
+      // }
+      // if (guy2X > 107 && guy2X < 147) {
+      //   getSquare[46].append(bombDown[46])
+      // }
       if (guy2X > 187 && guy2X < 227) {
         getSquare[47].append(bombDown[47])
       }
-      if (guy2X > 267 && guy2X < 307) {
-        getSquare[48].append(bombDown[48])
-      }
-      if (guy2X > 347 && guy2X < 387) {
-        getSquare[49].append(bombDown[49])
-      }
+      // if (guy2X > 267 && guy2X < 307) {
+      //   getSquare[48].append(bombDown[48])
+      // }
+      // if (guy2X > 347 && guy2X < 387) {
+      //   getSquare[49].append(bombDown[49])
+      // }
       if (guy2X > 427 && guy2X < 467) {
         getSquare[50].append(bombDown[50])
       }
