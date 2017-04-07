@@ -7,7 +7,7 @@ A two-player game that is played simultaneously. Each user has there own player 
 
 Player1 moves with arrow keys and tries to find a green bomb with either space, alt, or enter, while player2 moves with WASD and tries to find a green bomb with shift.
 
-Development & Technologies
+**Development & Technologies**
 
 HTML, CSS, Javascript, and JQuery.
 
