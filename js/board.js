@@ -380,14 +380,17 @@ bomb = {
   explode: false
 }
 
-plantBomb = function () {
+plantBomb = function (pos) {
+  var fire = document.createElement('div')
+  fire.className = 'fire'
+  var $fire = $(fire)
   if(keyState[32] || keyState[13] || keyState[18]) {
-    bomb.is.className = 'bomb'
-    var bombOut = $('<div>')
-    bombOut.addClass('bomb')
     if (guyY < 60) {
       if (guyX < 60){
         getSquare[0].append(bombDown[0])
+        getSquare[0].append(fire)
+        getSquare[1].append(fire)
+        getSquare[11].append(fire)
       }
       if (guyX > 60 && guyX < 107){
           getSquare[1].append(bombDown[1])
@@ -586,6 +589,8 @@ plantBomb = function () {
       }
     }
     $(".bomb").fadeOut(3000, function () {
+      $fire.fadeOut(1)
+      $fire.fadeIn(1000)
       bomb.explode = true
       $(".bomb").fadeIn(1, function (){
         $(this).remove()
@@ -594,7 +599,6 @@ plantBomb = function () {
     })
   }
   else if(keyState[16]) {
-    bomb.is.className = 'bomb'
     if (guy2Y < 60) {
       if (guy2X < 60){
         getSquare[0].append(bombDown[0])
@@ -804,36 +808,113 @@ plantBomb = function () {
     })
   }
 
+
   setTimeout (plantBomb, 50)
 }
 
-function bombFire() {
-  bomb.power.className = 'fire'
-  var up = bomb.power
-  var down = bomb.power
-  var right = bomb.power
-  var left = bomb.power
-  var whereBomb = $(bombDown)
-  var fire = $(getSquare)
-  whereBomb.eq += right
-  fire.eq(whereBomb).append(up)
-  fire.eq(whereBomb).append(down)
-  fire.eq(whereBomb).append(right)
-  fire.eq(whereBomb).append(left)
-}
-bombFire()
+// var r1 = []
+// var r2 = []
+// var r3 = []
+// var r4 = []
+// var r5 = []
+// var r6 = []
+// var r7 = []
+// var c1 = []
+// var c2 = []
+// var c3 = []
+// var c4 = []
+// var c5 = []
+// var c6 = []
+// var c7 = []
+// var c8 = []
+// var c9 = []
+// var c10 = []
+// var c11 = []
+//
+// for(var i = 0; i < trackSquares.length; i += 1){
+//   if (i > 13 && i < 25) {
+//     r1.push(trackSquares[i])
+//   }
+//   if (i > 26 && i < 38 && i % 2 == 1) {
+//     r2.push(trackSquares[i])
+//   }
+//   if (i > 39 && i < 51) {
+//     r3.push(trackSquares[i])
+//   }
+//   if (i > 52 && i < 64 && i % 2 == 1) {
+//     r4.push(trackSquares[i])
+//   }
+//   if (i > 65 && i < 77) {
+//     r5.push(trackSquares[i])
+//   }
+//   if (i > 78 && i < 90 && i % 2 == 1) {
+//     r6.push(trackSquares[i])
+//   }
+//   if (i > 91 && i < 103) {
+//     r7.push(trackSquares[i])
+//   }
+// }
+// for(var i = 0; i < trackSquares.length; i += 1) {
+//   if (i > 13 && i < 103 && i % 13 == 1) {
+//     c1.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 2 && i % 2 == 1) {
+//     c2.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 3) {
+//     c3.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 4 && i % 2 == 1) {
+//     c4.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 5) {
+//     c5.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 6 && i % 2 == 1) {
+//     c6.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 7) {
+//     c7.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 8 && i % 2 == 1) {
+//     c8.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 9) {
+//     c9.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 10 && i % 2 == 1) {
+//     c10.push(trackSquares[i])
+//   }
+//   if (i > 13 && i < 103 && i % 13 == 11) {
+//     c11.push(trackSquares[i])
+//   }
+// }
+
+// function bombFire() {
+//   var pos = $(bombDown).eq(r1)
+//   var getFire = document.createElement('div')
+//   getFire.className = 'fire'
+//   var fire = $(getSquare)
+//   fire.eq(pos).append(getFire).fadeIn(1000)
+// }
+// bombFire()
+
 
 var $timer = $('#timer')
 var countDown = setInterval(function () {
   $timer.html(parseInt($timer.text()) - 1)
+  var end = $('#end')
   if (guy1.alive == false) {
     clearInterval(countDown)
+    end.html('Game Over')
   }
   if (guy2.alive == false) {
     clearInterval(countDown)
+    end.html('Game Over')
   }
   if ($timer.html() == 0){
     clearInterval(countDown)
+    end.html('Game Over')
     // console.log('Wow you guys are bad. Tie')
   }
   checkWinner()
@@ -841,16 +922,16 @@ var countDown = setInterval(function () {
 
 function checkWinner() {
   if (guy1.alive == false && guy2.alive){
-    console.log("Red Wins")
+    alert("Red Wins")
   }
   if (guy1.alive && guy2.alive == false) {
-	   console.log('Blue Wins')
+	   alert('Blue Wins')
   }
   if (guy1.alive && guy2.alive && $timer.html() == 0) {
-    console.log('Everyone is Alive. Tie')
+    alert('Tie')
   }
   if (guy1.alive == false && guy2.alive == false) {
-    console.log('TIE by death')
+    alert('Tie')
   }
 }
 
