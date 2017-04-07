@@ -1,22 +1,19 @@
 # BomberMan
-## This is a great game
+## Two-player game 
 
-An example of incline code:
+A two-player game that is played simultaneously. Each user has there own player that can move and set bombs on the board. The bomb blow up to break object or to kill your oppenent. The object of the game is to be the last one alive.
 
-Run `nodemon` from the termianl. 
+**How to play:**
 
-An example of a code block:
+Player1 moves with arrow keys, while player2 moves with WASD.
 
-```javascript
-function helloWorld() {
-	console.log('boom');
-}
-```
+Development & Technologies
 
----
+HTML, CSS, Javascript, and JQuery.
 
-Images: 
+**User Stories:**
 
-![documentation/)
-
----
+* When get to the website, I see a start menu with a start button.
+* Start button loads up the game and I am able to move my character
+* I am able to place bomb where I want
+* I can blow up everything, including my oppenent

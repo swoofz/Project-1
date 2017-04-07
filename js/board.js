@@ -589,8 +589,6 @@ plantBomb = function (pos) {
       }
     }
     $(".bomb").fadeOut(3000, function () {
-      $fire.fadeOut(1)
-      $fire.fadeIn(1000)
       bomb.explode = true
       $(".bomb").fadeIn(1, function (){
         $(this).remove()
